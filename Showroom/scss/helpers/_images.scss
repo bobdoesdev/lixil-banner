@@ -1,0 +1,31 @@
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  &[data-billboard] {
+    @media #{$tiny-down} {
+      max-height: 250px !important;
+    }
+  }
+}
+.image-circled {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-height: 220px;
+  height: auto;
+  padding-bottom:100%;
+  background-color: $white;
+  border: 3px solid $bordergray;
+  border-radius: 100%;
+}
+
+.sectionPoints {
+  @media(max-width: 767px) and (min-width: 605px) {
+    margin-top: -7rem !important;
+  }
+  @media(max-width: 605px) and (min-width: 400px) {
+    margin-top: -1rem !important;
+  }
+}

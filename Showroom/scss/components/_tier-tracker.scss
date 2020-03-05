@@ -1,0 +1,191 @@
+#tier-tracker-container {
+	height:92px;
+	width:88px;
+	overflow:hidden;
+	position: fixed;
+	bottom: 10px;
+	right: 0;
+	cursor: pointer;
+	box-shadow:0 4px 3px -4px rgba(0,0,0,0.5);
+	background-image:url(../images/graphic-tracker_shadow.png);
+	background-size: auto auto;
+	background-position: center top;
+	@include transition(300ms ease 0ms height);
+	z-index:803;
+	&:hover {
+		height:408px;
+		#tier-tracker-slide {
+			bottom: 0px;
+		}
+		.tier-base {
+			&:after {
+				content: "-";
+			}
+		}
+	}
+}
+#tier-tracker {
+	// position:fixed;
+	position:absolute;
+	right: 4px;
+	bottom:0;
+	z-index: 900;
+	height:70px;
+	margin-top:15px;
+	width: 80px;
+	background-color: $white;
+	&:before {
+		border-bottom: 15px solid $white;
+		border-left:40px solid transparent;
+		border-right: 40px solid transparent;
+		content: "";
+		height: 0;
+		left: 0;
+		position: absolute;
+		top: -15px;
+		width: 0;
+	}
+	.tier {
+		background-color: $white;
+		display: inline-block;
+		bottom: 5px;
+		left:5px;
+		margin-top: 35px;
+		position: absolute;
+		width: 70px;
+		text-align: center;
+		padding-bottom:15px;
+		&:before {
+			border-bottom: 15px solid $white;
+			border-left: 35px solid transparent;
+			border-right: 35px solid transparent;
+			content: "";
+			height: 0;
+			left: 0;
+			position: absolute;
+			top: -15px;
+			width: 0;
+		}
+		h6 {
+			font-size:12px;
+			line-height: 15px;
+			color: $orange;
+		}
+	}
+	.tier-base {
+		z-index: 5;
+		padding-bottom: 0;
+		&:after {
+			content: "+";
+			top:-10px;
+			width:100%;
+			left: 0;
+			position:absolute;
+			color: $orange;
+			background:none;
+		}
+	}
+}
+
+#tier-tracker-slide {
+	position:absolute;
+	right: 4px;
+	bottom:-320px;
+	z-index: 899;
+	height:390px;
+	margin-top:15px;
+	width: 80px;
+	background-color: $white;
+	@include transition(300ms ease 0ms bottom);
+	.tier {
+		background-color: $white;
+		display: inline-block;
+		bottom: 5px;
+		left:5px;
+		margin-top: 35px;
+		position: absolute;
+		width: 70px;
+		text-align: center;
+		padding-bottom:15px;
+		&:before {
+			border-bottom: 15px solid $white;
+			border-left: 35px solid transparent;
+			border-right: 35px solid transparent;
+			content: "";
+			height: 0;
+			left: 0;
+			position: absolute;
+			top: -15px;
+			width: 0;
+		}
+		h6 {
+			font-size:12px;
+			line-height: 15px;
+			color: $orange;
+		}
+	}
+	.tier-silver {
+		bottom: 65px;
+		background-color: $tier1;
+		z-index:4;
+		&:before {
+			border-bottom: 15px solid $tier1;
+		}
+		h6 {
+			color: $white;
+		}
+	}
+	.tier-gold {
+		bottom:125px;
+		background-color: $tier2;
+		z-index:3;
+		padding-top:10px;
+		padding-bottom:25px;
+		&:before {
+			border-bottom: 15px solid $tier2;
+		}
+		h6 {
+			color: $white;
+		}
+	}
+	.tier-platinum {
+		bottom: 210px;
+		background-color: $tier3;
+		z-index:2;
+		padding-top:25px;
+		padding-bottom:40px;
+		&:before {
+			border-bottom: 15px solid $tier3;
+		}
+		h6 {
+			color: $white;
+		}
+	}
+	.tier-diamond {
+		bottom: 320px;
+		background-color: $tier4;
+		z-index:1;
+		margin-top:0;
+		&:before {
+			border-bottom: 15px solid $tier4;
+		}
+		h6 {
+			color: $white;
+		}
+	}
+}
+
+#tier-tracker-value {
+	width:72px;
+	height:80px;
+	border-bottom: 1px solid $orange;
+	position: absolute;
+	z-index:900;
+	left:8px;
+	bottom: 4px;
+	background-image:url(../images/graphic-tracker_value.png);
+	background-size: 100% auto;
+	background-position: center top;
+	background-repeat: no-repeat;
+	@include transition(300ms ease 0ms height);
+}

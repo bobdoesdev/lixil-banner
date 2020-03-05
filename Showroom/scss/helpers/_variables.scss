@@ -1,0 +1,245 @@
+//spacing
+$tiny: 5px;
+$small: 10px;
+$medium: 20px;
+$large: 40px;
+$xlarge: 80px;
+$xxlarge: 100px;
+
+// colors
+$orange: #ed5400;
+$darkorange: #B84000;
+$darkgray: #54585a;
+$black: #000000;
+$white: #ffffff;
+$gray: #4c4d4f;
+$bordergray: #b2b4b5;
+$lightgray: #909294;
+$hovergray: #e7e7e7;
+$cyan: #74c3c5;
+$offblack: #333333;
+$navyblue: #092b53;
+$red: #b70101;
+$tier1: #c7c8c9;
+$tier2: #a9abac;
+$tier3: #898c8e;
+$tier4: #676b6d;
+
+$colors: (
+  orange: $orange,
+  darkorange: $darkorange,
+  darkgray: $darkgray,
+  white: $white,
+  black: $black,
+  gray: $gray,
+  bordergray: $bordergray,
+  lightgray: $lightgray,
+  hovergray: $hovergray,
+  cyan: $cyan,
+  offblack: $offblack,
+  navyblue: $navyblue,
+  red: $red,
+  tier1: $tier1,
+  tier2: $tier2,
+  tier3: $tier3,
+  tier4: $tier4
+);
+
+
+//grids
+$large-grid-size: 1170px;
+$medium-grid-size: 970px;
+$small-grid-size: 750px;
+
+
+//queries
+$screen-lg-min: 1200px;
+$screen-md-max: 1199px;
+$screen-md-min: 992px;
+$screen-sm-max: 991px;
+$screen-sm-min: 768px;
+$screen-xs-max: 767px;
+$screen-xs-min: 1px;
+
+$tiny-down: "screen and (max-width: #{$screen-xs-max})";
+$small-down: "screen and (max-width: #{$screen-sm-max})";
+$medium-down: "screen and (max-width: #{$screen-md-max})";
+$large-down: "screen and (min-width: #{$screen-xs-min})";
+
+$tiny-up: "screen and (min-width: #{$screen-xs-min})";
+$small-up: "screen and (min-width: #{$screen-sm-min})";
+$medium-up: "screen and (min-width: #{$screen-md-min})";
+$large-up: "screen and (min-width: #{$screen-lg-min})";
+
+.height {
+  min-height: 50px;
+}
+
+.quiz-container {
+  display: none;
+}
+
+.removeLink {
+  visibility: hidden;
+}
+
+@media(min-width: 420px){
+  .inlineBlock {
+    display: inline-block;
+  }
+}
+
+@media(max-width: 420px){
+  .control-label-sort {
+    display: block;
+  }
+}
+
+.img-fluid-90 {
+  max-width: 85%;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 9%;
+}
+
+@media(min-width: 767px) {
+  .large-none {
+    display: none !important;
+  }
+  .panel-collapse p {
+    padding-right: 10%;
+  }
+  .faq-panels .panel-body p {
+    padding-right: 24%;
+  }
+}
+
+@media(max-width: 767px) {
+  .small-none {
+    display: none !important;
+  }
+}
+
+@media(max-width: 576px) {
+  .link-disabled {
+    pointer-events: none;
+  }
+}
+
+
+
+//mixins
+@mixin transition($arguments...) {
+  -webkit-transition: $arguments;
+  -moz-transition: $arguments;
+  -o-transition: $arguments;
+  transition: $arguments;
+}
+
+@media(max-width: 767px) and (min-width: 576px) {
+  .panel-body #profile-map {
+    margin-top: -460px !important;
+    padding: 20px 0px 20px 25px;
+  }
+
+  .form-inline #profile-map {
+    margin-top: -480px !important;
+    padding: 20px 0px 20px 5px;
+  }
+}
+
+h3.text-bold {
+  position: relative;
+  bottom: 5px;
+}
+
+h3.text-bold:after {
+    content: "";
+    height: 2px;
+    width: 40px;
+    background-color: #ed5400;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+@media(max-width:576px) {
+  .section {
+    padding-top: 25px !important;
+  }
+
+  .panel-body #profile-map {
+    margin-top: -480px !important;
+    padding: 20px 0px 20px 35px;
+  }
+
+  .form-inline #profile-map {
+    margin-top: -480px !important;
+    padding: 20px 0px 20px 5px;
+  }
+
+
+  h1.x2 {
+    font-size: 50px !important;
+  }
+
+  .card-wrap img {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.card-wrap {
+  max-height: 200px !important;
+  height: auto;
+  overflow: hidden;
+  img {
+    overflow: hidden;
+    max-height: 320px;
+    width: auto;
+    height: auto;
+  }
+}
+
+
+.pt-5 {
+  padding-top: 1.5rem;
+}
+
+.surveys-wrapper  h6 {
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  @media(max-width: 1200px){
+    font-size: 17px;
+  }
+  @media(max-width: 576px){
+    margin-bottom: auto !important;
+  }
+}
+
+.surveys-wrapper {
+  h6:after {
+    content: "";
+    height: 3px;
+    width: 40px;
+    background-color: #ed5400;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+  }
+}
+
+.model-body {
+  padding: 0px !important;
+}
+
+// .img-fluid-90 {
+//   max-width: 85%;
+//   width: 100%;
+//   margin: 0 auto;
+//   padding-top: 9%;
+// }

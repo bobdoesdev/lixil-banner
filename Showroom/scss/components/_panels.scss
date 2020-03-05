@@ -1,0 +1,121 @@
+.faq-panels {
+  .panel-group {
+    .panel-default {
+      h5 {
+        &.panel-title {
+          a {
+            display: block;
+            color: $darkgray;
+            @include transition(color 300ms ease-out 0s);
+            padding-right: 50px;
+            position: relative;
+            &:after {
+              content: "\e114";
+              font-family: "Glyphicons Halflings";
+              position: absolute;
+              right: 0;
+              top: 0;
+              font-size:22px;
+              -webkit-transform:rotate(0deg);
+              -moz-transform:rotate(0deg);
+              -ms-transform:rotate(0deg);
+              -o-transform:rotate(0deg);
+              transform:rotate(0deg);
+              @include transition(transform 300ms ease-out 0s, color 300ms ease-out 0s);
+            }
+            &[aria-expanded=true] {
+              color: $orange;
+              &:after {
+                -webkit-transform:rotate(-180deg);
+                -moz-transform:rotate(-180deg);
+                -ms-transform:rotate(-180deg);
+                -o-transform:rotate(-180deg);
+                transform:rotate(-180deg);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.open {
+      .panel-default {
+        h5 {
+          &.panel-title {
+            a {
+              color: $orange;
+              &:after {
+                -webkit-transform:rotate(-180deg);
+                -moz-transform:rotate(-180deg);
+                -ms-transform:rotate(-180deg);
+                -o-transform:rotate(-180deg);
+                transform:rotate(-180deg);
+                color: $orange;
+              }
+            }
+          }
+        }
+        .container {
+
+        }
+      }
+    }
+  }
+}
+
+.panel-body {
+  padding-left:0;
+  padding-right:0;
+}
+
+.panel-default {
+  border: none;
+  box-shadow: inset 0 4px 6px -2px rgba(0,0,0,0.17);
+  &.panel-top {
+    box-shadow: none;
+  }
+  & > .panel-heading {
+    color: $gray;
+    background: none;
+    border:none;
+  }
+}
+
+.panel-group {
+  margin-bottom: 0;
+  &.complete {
+    .panel-heading {
+      color: $orange;
+      .panel-title {
+        &:after {
+          content: " complete";
+        }
+      }
+    }
+  }
+  .panel {
+    border-radius: 0;
+  }
+  .panel-heading {
+    padding: 20px 0px;
+    & + .panel-collapse {
+      & > .panel-body {
+        border: none;
+      }
+    }
+  }
+}
+
+h5.panel-title {
+  font-size: 22px;
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+    &:focus {
+      text-decoration: none;
+    }
+    &:active {
+      text-decoration: none;
+    }
+  }
+}

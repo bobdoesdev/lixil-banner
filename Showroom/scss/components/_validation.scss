@@ -1,0 +1,64 @@
+.alert {
+  &.alert-danger {
+    background: none;
+    border: none;
+    position: relative;
+    padding: 0 0 0 25px;
+    margin: 15px 0;
+    vertical-align: middle;
+    font-weight: normal;
+    font-family: TradeGothic;
+    color: $red;
+    &:before {
+      content: "\e209";
+      font-family: "Glyphicons Halflings";
+      position: absolute;
+      left: 0;
+      top: -1px;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  &.alert-danger-overall {
+    background: none;
+    border: none;
+    position: relative;
+    padding: 0;
+    margin: 15px 0;
+    vertical-align: middle;
+    font-weight: normal;
+    font-family: TradeGothic;
+    color: $red;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+input {
+  &.form-control {
+    &.form-error {
+      border: 1px solid $red;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(183, 1, 1, 0.6);
+    }
+  }
+}
+
+select {
+  &.form-control {
+    &.form-error {
+      border: 1px solid $red;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(183, 1, 1, 0.6);
+    }
+  }
+}
+
+ul {
+  &.parsley-errors-list {
+    display: block;
+    padding-left: 0;
+    list-style: none;
+    li {
+      list-style: none;
+    }
+  }
+}

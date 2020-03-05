@@ -1,0 +1,26 @@
+@keyframes annoying {
+  2% {
+    transform:rotate(3deg)
+  }
+   4% {
+    transform:rotate(-3deg)
+  }
+   6% {
+    transform:rotate(3deg)
+  }
+   8% {
+    transform:rotate(-3deg)
+  }
+   10% {
+    transform:rotate(0deg)
+  }
+}
+
+.annoying {
+  animation-duration: 4s;
+  animation-name: annoying;
+  animation-iteration-count: infinite;
+  &:hover {
+    animation-iteration-count: 0;
+  }
+}

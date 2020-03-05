@@ -1,0 +1,43 @@
+.takeover-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  background: rgba(77,77,79,0.93);
+  z-index: 804;
+  overflow:auto;
+  &.active {
+    display: block;
+  }
+  .takeover-content {
+    padding-top: $medium;
+    padding-bottom: $large;
+    @media #{$medium-up} {
+      padding-top: 130px;
+    }
+    .close {
+      z-index: 2;
+    }
+  }
+}
+
+.terms-con {
+  width: 100% !important;
+  height: auto !important;
+  .terms-box {
+    // position: relative !important;
+  .close {
+    position: sticky !important;
+    top: 30px;
+    left: 96.5% !important;
+    z-index: 99999;
+  }
+  }
+}
+
+#modal-privacy_policy {
+  position: relative !important;
+}

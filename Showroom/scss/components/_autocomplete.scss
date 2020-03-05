@@ -1,0 +1,23 @@
+.ui-widget {
+  &.ui-widget-content {
+    max-height:200px;
+    overflow-y:auto;
+    overflow-x:visible;
+    .ui-menu-item {
+      .ui-menu-item-wrapper {
+        border:none;
+        background: none;
+        &:hover {
+          border:none;
+          margin:0;
+          background: $hovergray;
+        }
+        &.ui-state-active {
+          margin: 0;
+          border:none;
+          background:$hovergray;
+        }
+      }
+    }
+  }
+}

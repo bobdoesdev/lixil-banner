@@ -1,0 +1,51 @@
+.p-auto {
+  width: auto !important;
+}
+@media #{$tiny-up} {
+  .tiny-p-auto {
+    width: auto !important;
+  }
+}
+@media #{$small-up} {
+  .small-p-auto {
+    width: auto !important;
+  }
+}
+@media #{$medium-up} {
+  .medium-p-auto {
+    width: auto !important;
+  }
+}
+@media #{$large-up} {
+  .large-p-auto {
+    width: auto !important;
+  }
+}
+
+$percents: 100;
+@while $percents > 0 {
+  .p-#{$percents} {
+    width: 1% * $percents !important;
+  }
+  @media #{$tiny-up} {
+    .tiny-p-#{$percents} {
+      width: 1% * $percents !important;
+    }
+  }
+  @media #{$small-up} {
+    .small-p-#{$percents} {
+      width: 1% * $percents !important;
+    }
+  }
+  @media #{$medium-up} {
+    .medium-p-#{$percents} {
+      width: 1% * $percents !important;
+    }
+  }
+  @media #{$large-up} {
+    .large-p-#{$percents} {
+      width: 1% * $percents !important;
+    }
+  }
+  $percents: $percents - 5;
+}

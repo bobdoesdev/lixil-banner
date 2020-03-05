@@ -1,0 +1,108 @@
+// .modal-open {
+.modal {
+  &.in {
+    @media #{$tiny-down} {
+      padding-right: 0 !important;
+      .modal-dialog {
+        margin:0 !important;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        position:absolute;
+        .modal-content {
+          position:relative;
+          min-height: 100%;
+          .modal-body {
+            position:relative;
+            min-height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-dialog {
+  max-height:98%;
+  top:2.5%;
+  overflow:auto;
+  margin:0 auto;
+}
+
+.modal-content {
+  border-radius: 0;
+  border:none;
+  padding: 30px 20px;
+  overflow:auto;
+  @media #{$small-up} {
+    padding: 30px;
+  }
+  .modal-body {
+    border: 2px solid $gray;
+    position: relative;
+    padding: 30px 25px 85px 25px;
+    @media #{$small-up} {
+      padding: 30px 40px 85px 40px;
+    }
+    h1 {
+      margin-top: 0px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: $medium;
+      left: -8px;
+      width: 16px;
+      height: 80px;
+      background-color: white;
+      background-image: url(../images/icon-orange_arrow.png);
+      background-position: 0 10px;
+      background-repeat: no-repeat;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      height: 55px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $gray;
+    }
+  }
+}
+
+.modal-dialog {
+  @media #{$small-up} {
+    width: 650px;
+  }
+}
+
+.modal-large {
+  .modal-dialog {
+    @media #{$small-up} {
+      width: 700px;
+    }
+  }
+}
+
+.close {
+  float: none;
+  position: absolute;
+  top: 7px;
+  right: 9px;
+  color: $navyblue;
+  opacity: 1;
+  @include transition(color 300ms ease 0s);
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  &:active {
+    outline: none;
+    box-shadow: none;
+  }
+  &:hover {
+    color: $lightgray;
+  }
+}

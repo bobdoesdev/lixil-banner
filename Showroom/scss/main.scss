@@ -1,0 +1,225 @@
+@import "helpers/variables";
+@import "components/fonts";
+@import "helpers/colors";
+@import "helpers/borders";
+@import "helpers/spacing";
+@import "helpers/display";
+@import "helpers/widths";
+@import "helpers/images";
+@import "helpers/box-shadow";
+@import "helpers/align";
+@import "helpers/grid";
+
+@import "components/animations";
+@import "components/nav";
+@import "components/footer";
+@import "components/billboards";
+@import "components/buttons";
+@import "components/forms";
+@import "components/modals";
+@import "components/validation";
+@import "components/tables";
+@import "components/panels";
+@import "components/autocomplete";
+@import "components/learn-earn";
+@import "components/tier-tracker";
+@import "components/takeover-notice";
+@import "components/national-person";
+
+html {
+  height: 100%;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+}
+
+body {
+  position: relative; margin: 0;
+  font-family: TradeGothic;
+  font-weight: 400;
+  color: $gray;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing:0.3px;
+  &.sticky {
+    min-height: 100%;
+  }
+  @media #{$tiny-down} {
+    padding-top:89px;
+  }
+}
+
+h1 {
+  font-family: TradeGothic;
+  color: $darkgray;
+  letter-spacing: 0.5px;
+  position: relative;
+  margin-bottom: $medium;
+  &:after {
+    content: "";
+    height: 2px;
+    width: 40px;
+    background-color: $orange;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  @media #{$small-up} {
+    font-size: 40px;
+    line-height: 44px;
+  }
+  &.x2 {
+    font-size: 72px;
+    line-height: 70px;
+    &:after {
+      height: 0;
+      width: 0;
+      background: none;
+      border-radius: 0;
+    }
+    @media #{$small-up} {
+      font-size: 80px;
+      line-height: 80px;
+    }
+  }
+  &.text-white {
+    color: $white;
+    &:after {
+      background-color: $white;
+    }
+  }
+}
+
+h2 {
+  font-family: TradeGothicBold;
+  color: $darkgray;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  @media #{$small-up} {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+h5 {
+  font-family: TradeGothicLight;
+  color: $darkgray;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+h6 {
+  font-family: TradeGothic;
+  color: $darkgray;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  line-height: 22px;
+  &.profile-label {
+    font-size: 12px;
+    line-height: 16px;
+    position: relative;
+    padding-bottom: 2px;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      max-width: 85px;
+      height: 1px;
+      background-color: $darkgray;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+}
+
+#profile-map {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+}
+
+.row {
+  &.vert-middle {
+    display: flex;
+    align-items:center;
+  }
+}
+
+.section {
+  padding-top: $large;
+  padding-bottom: $large;
+  @media #{$small-up} {
+    padding-top: $xlarge;
+    padding-bottom: $xlarge;
+  }
+}
+
+.separator {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  width: 1px;
+  background-color: $lightgray;
+}
+
+strong {
+  font-family: TradeGothicBold;
+  font-weight: bold;
+}
+
+.table-tiers {
+  thead {
+    tr {
+      th {
+        &:after {
+          height: 0;
+          background: none;
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        border: 2px solid white;
+      }
+    }
+  }
+}
+
+ul {
+  li {
+    a {
+      &.btn {
+        padding-top:5px;
+        line-height:14px;
+      }
+    }
+  }
+}
+
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.orange-highlight{
+  color: $orange;
+}

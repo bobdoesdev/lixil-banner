@@ -1,0 +1,88 @@
+@each $direction in left, right, top, bottom {
+  .border-#{$direction} {
+    border-#{$direction}: 1px solid $bordergray !important;
+  }
+}
+.border-horiz {
+  border-left: 1px solid $bordergray !important;
+  border-right: 1px solid $bordergray !important;
+}
+.border-vert {
+  border-top: 1px solid $bordergray !important;
+  border-bottom: 1px solid $bordergray !important;
+}
+.border {
+  border: 1px solid $bordergray !important;
+}
+@media #{$tiny-up} {
+  @each $direction in left, right, top, bottom {
+    .tiny-border-#{$direction} {
+      border-#{$direction}: 1px solid $bordergray !important;
+    }
+  }
+  .tiny-border-horiz {
+    border-left: 1px solid $bordergray !important;
+    border-right: 1px solid $bordergray !important;
+  }
+  .tiny-border-vert {
+    border-top: 1px solid $bordergray !important;
+    border-bottom: 1px solid $bordergray !important;
+  }
+  .tiny-border {
+    border: 1px solid $bordergray !important;
+  }
+}
+@media #{$small-up} {
+  @each $direction in left, right, top, bottom {
+    .small-border-#{$direction} {
+      border-#{$direction}: 1px solid $bordergray !important;
+    }
+  }
+  .small-border-horiz {
+    border-left: 1px solid $bordergray !important;
+    border-right: 1px solid $bordergray !important;
+  }
+  .small-border-vert {
+    border-top: 1px solid $bordergray !important;
+    border-bottom: 1px solid $bordergray !important;
+  }
+  .small-border {
+    border: 1px solid $bordergray !important;
+  }
+}
+@media #{$medium-up} {
+  @each $direction in left, right, top, bottom {
+    .medium-border-#{$direction} {
+      border-#{$direction}: 1px solid $bordergray !important;
+    }
+  }
+  .medium-border-horiz {
+    border-left: 1px solid $bordergray !important;
+    border-right: 1px solid $bordergray !important;
+  }
+  .medium-border-vert {
+    border-top: 1px solid $bordergray !important;
+    border-bottom: 1px solid $bordergray !important;
+  }
+  .medium-border {
+    border: 1px solid $bordergray !important;
+  }
+}
+@media #{$large-up} {
+  @each $direction in left, right, top, bottom {
+    .large-border-#{$direction} {
+      border-#{$direction}: 1px solid $bordergray !important;
+    }
+  }
+  .large-border-horiz {
+    border-left: 1px solid $bordergray !important;
+    border-right: 1px solid $bordergray !important;
+  }
+  .large-border-vert {
+    border-top: 1px solid $bordergray !important;
+    border-bottom: 1px solid $bordergray !important;
+  }
+  .large-border {
+    border: 1px solid $bordergray !important;
+  }
+}

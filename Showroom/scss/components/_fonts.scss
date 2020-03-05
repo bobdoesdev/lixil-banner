@@ -1,0 +1,85 @@
+@font-face {
+  font-family: TradeGothic;
+  src: url(fonts/TradeGothicLTStd.otf);
+}
+@font-face {
+  font-family: TradeGothicLight;
+  src: url(fonts/TradeGothicLTStd-Light.otf);
+}
+@font-face {
+  font-family: TradeGothicBold;
+  src: url(fonts/TradeGothicLTStd-Bold.otf);
+}
+
+.text-tiny {
+  font-size: 9px !important;
+  line-height: 13px !important;
+}
+
+.text-small {
+  font-size: 12px !important;
+  line-height: 16px !important;
+}
+
+.text-underline {
+  text-decoration: underline !important;
+}
+
+.text-bold {
+  font-family: TradeGothicBold !important;
+  font-weight: 700 !important;
+}
+
+.no-underline {
+  text-decoration: none !important;
+}
+
+.orange-underline {
+  position: relative;
+  padding-bottom: 5px;
+  &:after {
+    content: "";
+    height: 2px;
+    width: 40px;
+    background-color: $orange;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.font-weight-normal {
+  font-family: TradeGothic !important;
+  font-weight: normal !important;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+@media #{$small-up} {
+  .text-sm-right {
+    text-align: right;
+  }
+  .text-sm-left {
+    text-align: left;
+  }
+}
+@media #{$medium-up} {
+  .text-md-right {
+    text-align: right;
+  }
+  .text-md-left {
+    text-align: left;
+  }
+}
+@media #{$large-up} {
+  .text-lg-right {
+    text-align: right;
+  }
+  .text-lg-left {
+    text-align: left;
+  }
+}

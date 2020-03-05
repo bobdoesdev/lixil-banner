@@ -1,0 +1,13 @@
+.block-grid {
+  @for $total from 1 through 16 {
+    @for $col from 1 through 16 {
+      .block-#{$col}-of-#{$total} {
+        width: $col / $total * 100%;
+        float: left;
+        &:last-child {
+          float: right;
+        }
+      }
+    }
+  }
+}

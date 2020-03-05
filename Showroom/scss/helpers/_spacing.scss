@@ -1,0 +1,92 @@
+@each $type in padding, margin {
+  @each $sizer, $value in (zero: 0px, tiny: $tiny, small: $small, medium: $medium, large: $large, xlarge: $xlarge, xxlarge: $xxlarge) {
+    @each $direction in top, right, bottom, left {
+      .#{$type}-#{$direction}-#{$sizer} {
+        #{$type}-#{$direction}: $value !important;
+      }
+      @media #{$large-up} {
+        .large-#{$type}-#{$direction}-#{$sizer} {
+          #{$type}-#{$direction}: $value !important;
+        }
+      }
+      @media #{$medium-up} {
+        .medium-#{$type}-#{$direction}-#{$sizer} {
+          #{$type}-#{$direction}: $value !important;
+        }
+      }
+      @media #{$small-up} {
+        .small-#{$type}-#{$direction}-#{$sizer} {
+          #{$type}-#{$direction}: $value !important;
+        }
+      }
+      @media #{$tiny-up} {
+        .tiny-#{$type}-#{$direction}-#{$sizer} {
+          #{$type}-#{$direction}: $value;
+        }
+      }
+    }
+    .#{$type}-horiz-#{$sizer} {
+      #{$type}-left: $value !important;
+      #{$type}-right: $value !important;
+    }
+    .#{$type}-vert-#{$sizer} {
+      #{$type}-top: $value !important;
+      #{$type}-bottom: $value !important;
+    }
+    .#{$type}-all-#{$sizer} {
+      #{$type}: $value !important;
+    }
+    @media #{$large-up} {
+      .large-#{$type}-horiz-#{$sizer} {
+        #{$type}-left: $value;
+        #{$type}-right: $value;
+      }
+      .large-#{$type}-vert-#{$sizer} {
+        #{$type}-top: $value;
+        #{$type}-bottom: $value;
+      }
+      .large-#{$type}-all-#{$sizer} {
+        #{$type}: $value;
+      }
+    }
+    @media #{$medium-up} {
+      .medium-#{$type}-horiz-#{$sizer} {
+        #{$type}-left: $value;
+        #{$type}-right: $value;
+      }
+      .medium-#{$type}-vert-#{$sizer} {
+        #{$type}-top: $value;
+        #{$type}-bottom: $value;
+      }
+      .medium-#{$type}-all-#{$sizer} {
+        #{$type}: $value;
+      }
+    }
+    @media #{$small-up} {
+      .small-#{$type}-horiz-#{$sizer} {
+        #{$type}-left: $value;
+        #{$type}-right: $value;
+      }
+      .small-#{$type}-vert-#{$sizer} {
+        #{$type}-top: $value;
+        #{$type}-bottom: $value;
+      }
+      .small-#{$type}-all-#{$sizer} {
+        #{$type}: $value;
+      }
+    }
+    @media #{$tiny-up} {
+      .tiny-#{$type}-horiz-#{$sizer} {
+        #{$type}-left: $value;
+        #{$type}-right: $value;
+      }
+      .tiny-#{$type}-vert-#{$sizer} {
+        #{$type}-top: $value;
+        #{$type}-bottom: $value;
+      }
+      .tiny-#{$type}-all-#{$sizer} {
+        #{$type}: $value;
+      }
+    }
+  }
+}
